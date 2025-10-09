@@ -17,7 +17,7 @@ const CVSection = () => {
         <div className="flex justify-center gap-4 flex-wrap">
           {/* Download Button */}
           <a
-            href="/Meraz_Sheikh_CV.pdf"
+            href="Meraz_Sheikh_CV_2025.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
@@ -29,7 +29,7 @@ const CVSection = () => {
 
           {/* View Online Button */}
           <a
-            href="/Meraz_Sheikh_CV.pdf"
+            href="Meraz_Sheikh_CV_2025.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border border-primary text-primary px-6 py-3 rounded-md font-medium hover:bg-primary hover:text-white transition"
