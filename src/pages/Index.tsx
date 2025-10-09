@@ -1,6 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
-import CVSection from "@/components/CVSection";
+import CVSection from "@/components/CVSection";  // ✅ Add this line
 import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
@@ -15,7 +15,7 @@ const Index = () => {
       <Navigation />
       <main>
         <Hero />
-        <CVSection />
+        <CVSection /> {/* ✅ Add section here */}
         <About />
         <Experience />
         <Skills />

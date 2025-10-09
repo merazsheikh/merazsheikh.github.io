@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { FileText } from "lucide-react"; // ✅ Icon for CV link (optional)
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,6 +21,7 @@ const Navigation = () => {
     { name: "Experience", href: "#experience" },
     { name: "Skills", href: "#skills" },
     { name: "Portfolio", href: "#portfolio" },
+    { name: "CV", href: "#cv" },        // ✅ Added CV section
     { name: "Contact", href: "#contact" },
   ];
 
@@ -37,6 +39,7 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
+          {/* Logo */}
           <a
             href="#home"
             onClick={(e) => {
@@ -58,11 +61,15 @@ const Navigation = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className={`text-muted-foreground hover:text-primary transition-colors duration-300 font-medium ${
+                  link.name === "CV" ? "flex items-center gap-1" : ""
+                }`}
               >
+                {link.name === "CV" && <FileText size={16} />} {/* ✅ Optional Icon */}
                 {link.name}
               </a>
             ))}
+
             <Button
               variant="default"
               onClick={() => scrollToSection("#contact")}
@@ -93,8 +100,9 @@ const Navigation = () => {
                     e.preventDefault();
                     scrollToSection(link.href);
                   }}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium py-2 flex items-center gap-1"
                 >
+                  {link.name === "CV" && <FileText size={16} />}
                   {link.name}
                 </a>
               ))}
