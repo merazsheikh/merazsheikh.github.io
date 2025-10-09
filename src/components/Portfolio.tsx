@@ -9,6 +9,17 @@ const Portfolio = () => {
 
   const projects = [
     {
+      icon: Target,
+      title: "Deepfake Detection using Image Augmentations",
+      category: "Computer Vision / Research",
+      description:
+        "A dissertation project exploring the impact of image augmentations on deepfake detection models. Benchmarks 11 augmentation methods across 5 architectures, with Grad-CAM visualizations to interpret model behavior.",
+      technologies: ["PyTorch", "Pytorch & Timm Models", "Augmentations", "Grad-CAM"],
+      color: "text-primary",
+      repo: "https://github.com/merazsheikh/deepfake_detection_using_augmentations",
+      pdf: "https://github.com/merazsheikh/deepfake_detection_using_augmentations/blob/main/Dissertation_Report_IEEE_K2453542.pdf",
+    },
+    {
       icon: TrendingUp,
       title: "GBP/USD Exchange Rate Forecasting",
       category: "Deep Learning",
@@ -62,7 +73,10 @@ const Portfolio = () => {
                 <Card
                   className="p-8 bg-card border-border group cursor-pointer relative overflow-hidden"
                   style={{
-                    transform: hoveredIndex === index ? "perspective(1000px) rotateY(5deg)" : "none",
+                    transform:
+                      hoveredIndex === index
+                        ? "perspective(1000px) rotateY(5deg)"
+                        : "none",
                     transition: "transform 0.3s ease",
                   }}
                 >
@@ -78,15 +92,31 @@ const Portfolio = () => {
                     >
                       <project.icon className={project.color} size={32} />
                     </motion.div>
-                    <motion.div
-                      whileHover={{ scale: 1.2, rotate: 15 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <ExternalLink
-                        className="text-muted-foreground group-hover:text-primary transition-colors"
-                        size={20}
-                      />
-                    </motion.div>
+
+                    <div className="flex space-x-3">
+                      {project.repo && (
+                        <a
+                          href={project.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                          title="View GitHub Repository"
+                        >
+                          <ExternalLink size={20} />
+                        </a>
+                      )}
+                      {project.pdf && (
+                        <a
+                          href={project.pdf}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-primary transition-colors"
+                          title="Download Final Report (PDF)"
+                        >
+                          📄
+                        </a>
+                      )}
+                    </div>
                   </div>
 
                   <span className="inline-block px-3 py-1 bg-muted rounded-full text-xs font-medium text-primary mb-4 relative z-10">
