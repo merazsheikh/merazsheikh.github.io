@@ -1,74 +1,217 @@
-# Welcome to your Lovable project
+```markdown
+# Meraz Jalaluddin Sheikh - Portfolio
 
-## Project info
+[![Live Site](https://img.shields.io/badge/Live-Site-blue)](https://merazsheikh.github.io/)
+[![GitHub](https://img.shields.io/badge/GitHub-Profile-black)](https://github.com/merazsheikh)
+[![TypeScript](https://img.shields.io/badge/TypeScript-97%25-blue)](https://github.com/merazsheikh/merazsheikh.github.io)
 
-**URL**: https://lovable.dev/projects/0ad657ef-ec15-437b-aeae-b1e0e4281f90
+## 👨‍💻 About
 
-## How can I edit this code?
+Personal portfolio website showcasing my journey as an aspiring Data Scientist, Data Engineer, and API Developer. Built with modern web technologies to highlight my projects, skills, and professional experience in transforming data into actionable insights with machine learning, deep learning, and scalable API development.
 
-There are several ways of editing your application.
+**Based in London, UK** 🇬🇧
 
-**Use Lovable**
+## 🚀 Live Demo
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/0ad657ef-ec15-437b-aeae-b1e0e4281f90) and start prompting.
+Visit the live portfolio: **[https://merazsheikh.github.io/](https://merazsheikh.github.io/)**
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✨ Features
 
-**Use your preferred IDE**
+- ✅ **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
+- ✅ **Interactive Navigation**: Smooth scrolling with mobile-friendly menu
+- ✅ **Project Showcase**: Portfolio section highlighting data science and machine learning projects
+- ✅ **Skills Display**: Comprehensive overview of technical skills
+- ✅ **Experience Timeline**: Professional experience and educational background
+- ✅ **Contact Section**: Easy ways to get in touch
+- ✅ **CV Download**: Downloadable resume/CV for recruiters and opportunities
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend Framework**: React 18
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn-ui
+- **Build Tool**: Vite
+- **Routing**: React Router
+- **State Management**: React Query (TanStack Query)
+- **Icons**: Lucide React
+- **Hosting**: GitHub Pages
+- **Development Platform**: Lovable
 
-Follow these steps:
+## 📂 Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```
+merazsheikh.github.io/
+├── src/
+│   ├── components/          # React components
+│   │   ├── Navigation.tsx   # Fixed navbar with mobile menu
+│   │   ├── Hero.tsx        # Hero section
+│   │   ├── About.tsx       # About section
+│   │   ├── Experience.tsx  # Experience timeline
+│   │   ├── Skills.tsx      # Skills showcase
+│   │   ├── Portfolio.tsx   # Project portfolio
+│   │   ├── CVSection.tsx   # CV download section
+│   │   ├── Contact.tsx     # Contact form
+│   │   └── Footer.tsx      # Footer
+│   ├── pages/              # Page components
+│   │   ├── Index.tsx       # Main page
+│   │   └── NotFound.tsx    # 404 page
+│   ├── lib/                # Utility functions
+│   └── App.tsx             # Root component
+├── public/                 # Static assets
+├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+└── README.md
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## 🚀 Getting Started
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Prerequisites
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+- Node.js (v16 or higher recommended)
+- npm or yarn package manager
+- Git
+
+### Installation
+
+1. **Clone the repository:**
+```
+git clone https://github.com/merazsheikh/merazsheikh.github.io.git
+```
+
+2. **Navigate to the project directory:**
+```
+cd merazsheikh.github.io
+```
+
+3. **Install dependencies:**
+```
+npm install
+```
+
+4. **Start the development server:**
+```
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+5. **Open your browser and visit:** `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Building for Production
 
-**Use GitHub Codespaces**
+```
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The production-ready files will be generated in the `dist/` directory.
 
-## What technologies are used for this project?
+### Preview Production Build
 
-This project is built with:
+```
+npm run preview
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎨 Customization
 
-## How can I deploy this project?
+This project was built using [Lovable](https://lovable.dev/projects/0ad657ef-ec15-437b-aeae-b1e0e4281f90). You can customize it in several ways:
 
-Simply open [Lovable](https://lovable.dev/projects/0ad657ef-ec15-437b-aeae-b1e0e4281f90) and click on Share -> Publish.
+### Using Lovable Platform
+- Simply visit the Lovable Project and start prompting
+- Changes made via Lovable will be committed automatically to this repo
 
-## Can I connect a custom domain to my Lovable project?
+### Using Your IDE
+- Clone the repo and edit locally
+- Push changes back to GitHub
+- Changes will also be reflected in Lovable
 
-Yes, you can!
+### Direct GitHub Editing
+- Navigate to the desired file(s)
+- Click the "Edit" button (pencil icon)
+- Make your changes and commit
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+### Using GitHub Codespaces
+- Click on the "Code" button
+- Select the "Codespaces" tab
+- Click "New codespace"
+- Edit files directly within the Codespace
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
-"# trigger deploy"    # adds a line to README
+## 📝 Portfolio Sections
+
+### 🏠 Home
+Hero section with introduction and call-to-action displaying "Available for opportunities"
+
+### 👤 About
+Background and professional summary highlighting expertise in data science and API development
+
+### 💼 Experience
+Work experience timeline featuring projects such as:
+- **Financial Time-Series Forecasting**: Using GRU, CNN, and custom FNN models with high accuracy
+- **Binary Classification Comparative Study**: Testing 8 ML models with and without LDA preprocessing
+
+### 🛠️ Skills
+Technical skills showcase including:
+- **Languages**: Python
+- **Frameworks**: TensorFlow, Scikit-learn
+- **Techniques**: LSTM, CNN, Time-Series Analysis, Machine Learning, Deep Learning
+- **Tools**: APIs, Data Engineering pipelines
+
+### 📂 Portfolio
+Featured data science, machine learning, and API development projects with detailed descriptions
+
+### 📄 CV
+Downloadable resume section with "Download CV" and "View Online" options
+
+### 📧 Contact
+Contact form and social links for professional networking
+
+## 🔧 Key Technical Implementations
+
+### Mobile Menu Z-Index Fix
+Implemented React Portal for mobile navigation overlay to ensure proper stacking context across all page sections, with backdrop blur effect for modern UI.
+
+### Responsive Navigation
+Fixed navbar that transitions on scroll with mobile hamburger menu and smooth section scrolling.
+
+### Performance Optimization
+- Vite for fast builds and hot module replacement
+- Code splitting with React Router
+- Optimized images and assets
+
+## 🤝 Contributing
+
+While this is a personal portfolio project, suggestions and feedback are always welcome!
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/Improvement`)
+3. Commit your changes (`git commit -m 'Add some improvement'`)
+4. Push to the branch (`git push origin feature/Improvement`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🔗 Connect With Me
+
+**Meraz Jalaluddin Sheikh**
+
+- 🌐 Portfolio: [https://merazsheikh.github.io/](https://merazsheikh.github.io/)
+- 💼 GitHub: [@merazsheikh](https://github.com/merazsheikh)
+- 📍 Location: London, UK
+- 💡 Status: Available for opportunities
+
+## 🙏 Acknowledgments
+
+- Built with [Lovable](https://lovable.dev/)
+- UI components from [shadcn/ui](https://ui.shadcn.com/)
+- Icons by [Lucide](https://lucide.dev/)
+- Hosted on [GitHub Pages](https://pages.github.com/)
+
+---
+
+⭐ **If you like this project, please consider giving it a star!**
+
+*Built with ❤️ using React, TypeScript, and Tailwind CSS*
+
+**Last Updated**: October 2025
+```
