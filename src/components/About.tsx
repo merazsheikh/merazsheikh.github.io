@@ -23,10 +23,12 @@ const About = () => {
             <p className="text-muted-foreground mb-6">Hounslow, London</p>
             
             <h3 className="text-xl font-bold mb-4">Professional Summary</h3>
+            <p className="font-medium text-primary mb-3">Data Scientist, AI & ML Engineer</p>
             <p className="text-muted-foreground leading-relaxed">
-              Aspiring Data Scientist with a strong foundation in mathematics, statistics, and programming. 
-              Adept at building predictive models and deriving actionable insights from data. Looking to 
-              contribute to data-driven decision-making and data engineer role in a fast-paced tech environment.
+              Data Scientist with strong expertise in machine learning, computer vision, and deep learning. 
+              I build end-to-end ML systems and APIs that solve real problems—from research-grade models to 
+              production deployment. Passionate about turning data into actionable insights and driving innovation 
+              in fast-paced tech environments.
             </p>
           </Card>
           </AnimatedSection>
@@ -47,7 +49,7 @@ const About = () => {
                   Kingston University
                 </p>
                 <p className="text-sm text-muted-foreground mb-2">
-                  Sep 2024 – Sep 2025 (Expecting result by Nov 2025)
+                  Sep 2024 – Sep 2025 · Distinction
                 </p>
                 <p className="text-sm text-muted-foreground italic">
                   Dissertation: Deepfake Detection using Image Augmentation

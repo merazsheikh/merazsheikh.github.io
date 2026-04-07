@@ -47,11 +47,11 @@ const Hero = () => {
               <span className="gradient-text">Sheikh</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium">
-              Aspiring Data Scientist | Data Engineer | API Developer
+              Data Scientist & ML Engineer
             </p>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl">
-              Transforming data into actionable insights with expertise in machine learning, 
-              deep learning, and scalable API development. Based in London.
+              Building production-ready machine learning systems and scalable APIs that turn data into action. 
+              Specializing in deep learning, computer vision, and data-driven solutions. Based in London.
             </p>
             <div className="flex flex-wrap gap-4 mb-8">
               <Button

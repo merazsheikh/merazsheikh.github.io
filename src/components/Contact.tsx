@@ -3,31 +3,38 @@ import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [messageStatus, setMessageStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
+    setMessageStatus("sending");
 
     if (!form.current) return;
 
     emailjs
       .sendForm(
-        "service_h62h1wi",   // <-- Your Service ID
-        "template_e9qx0gu",  // <-- Your Template ID
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         form.current,
-        "JV_TPZjuN6FkxXStW"  // <-- Your Public Key
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          setMessageStatus("success");
+          setErrorMessage("");
           form.current?.reset();
+          setTimeout(() => setMessageStatus("idle"), 5000);
         },
         (error) => {
-          alert("Failed to send message: " + JSON.stringify(error));
+          setMessageStatus("error");
+          setErrorMessage("Failed to send message. Please try again or contact directly.");
+          console.error(error);
         }
       );
   };
@@ -117,35 +124,70 @@ const Contact = () => {
           <AnimatedSection delay={0.4}>
             <Card className="p-8 md:p-12 bg-card border-border text-center">
               <h3 className="text-2xl font-bold mb-4">Send Me a Message</h3>
+              
+              {messageStatus === "success" && (
+                <div className="mb-6 p-4 bg-green-500/10 border border-green-500/40 rounded-lg">
+                  <p className="text-green-600 dark:text-green-400 font-medium">
+                    ✓ Message sent successfully! I'll get back to you soon.
+                  </p>
+                </div>
+              )}
+
+              {messageStatus === "error" && (
+                <div className="mb-6 p-4 bg-red-500/10 border border-red-500/40 rounded-lg">
+                  <p className="text-red-600 dark:text-red-400 font-medium">
+                    ✗ {errorMessage}
+                  </p>
+                </div>
+              )}
               <form ref={form} onSubmit={sendEmail} className="space-y-4 max-w-lg mx-auto">
-                <input
-                  type="text"
-                  name="from_name"
-                  placeholder="Your Name"
-                  required
-                  className="w-full p-3 border rounded"
-                />
-                <input
-                  type="email"
-                  name="from_email"
-                  placeholder="Your Email"
-                  required
-                  className="w-full p-3 border rounded"
-                />
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  required
-                  rows={5}
-                  className="w-full p-3 border rounded"
-                ></textarea>
+                <div className="space-y-2">
+                  <label htmlFor="from_name" className="text-sm font-medium">
+                    Your Name
+                  </label>
+                  <input
+                    id="from_name"
+                    type="text"
+                    name="from_name"
+                    placeholder="John Doe"
+                    required
+                    className="w-full p-3 border rounded bg-background text-foreground placeholder:text-muted-foreground"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="from_email" className="text-sm font-medium">
+                    Your Email
+                  </label>
+                  <input
+                    id="from_email"
+                    type="email"
+                    name="from_email"
+                    placeholder="your.email@example.com"
+                    required
+                    className="w-full p-3 border rounded bg-background text-foreground placeholder:text-muted-foreground"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium">
+                    Your Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Tell me about your project or opportunity..."
+                    required
+                    rows={5}
+                    className="w-full p-3 border rounded bg-background text-foreground placeholder:text-muted-foreground"
+                  ></textarea>
+                </div>
 
                 <Button
                   type="submit"
-                  className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-lg px-8 py-6"
+                  disabled={messageStatus === "sending"}
+                  className="bg-gradient-to-r from-primary to-accent hover:opacity-90 text-lg px-8 py-6 w-full disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Mail className="mr-2" size={20} />
-                  Send Message
+                  {messageStatus === "sending" ? "Sending..." : "Send Message"}
                 </Button>
               </form>
 

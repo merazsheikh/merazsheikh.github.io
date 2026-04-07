@@ -32,6 +32,15 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
   };
 
+  const handleResumeDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/Meraz_Sheikh_CV_2025.pdf";
+    link.download = "Meraz_Sheikh_CV_2025.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <nav
@@ -71,6 +80,15 @@ const Navigation = () => {
                   {link.name}
                 </a>
               ))}
+
+              <Button
+                variant="outline"
+                onClick={handleResumeDownload}
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground flex items-center gap-2"
+              >
+                <FileText size={16} />
+                Resume
+              </Button>
 
               <Button
                 variant="default"
@@ -126,6 +144,14 @@ const Navigation = () => {
                   {link.name}
                 </a>
               ))}
+              <Button
+                variant="outline"
+                onClick={handleResumeDownload}
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground flex justify-center items-center gap-2 mt-2"
+              >
+                <FileText size={16} />
+                Download Resume
+              </Button>
               <Button
                 variant="default"
                 onClick={() => scrollToSection("#contact")}
