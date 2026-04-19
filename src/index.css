@@ -2,52 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
 @layer base {
+  /* Light theme (default) */
   :root {
-    --background: 217 30% 8%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 100%;
+    --foreground: 217 30% 10%;
 
-    --card: 217 28% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 217 30% 10%;
 
-    --popover: 217 28% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 30% 10%;
 
-    --primary: 189 94% 43%;
-    --primary-foreground: 217 30% 8%;
+    --primary: 189 94% 35%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 93% 58%;
-    --secondary-foreground: 217 30% 8%;
+    --secondary: 45 93% 45%;
+    --secondary-foreground: 217 30% 10%;
 
-    --muted: 217 25% 18%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 217 15% 94%;
+    --muted-foreground: 217 15% 40%;
 
-    --accent: 189 94% 43%;
-    --accent-foreground: 217 30% 8%;
+    --accent: 189 94% 35%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217 25% 20%;
-    --input: 217 25% 18%;
-    --ring: 189 94% 43%;
+    --border: 217 15% 88%;
+    --input: 217 15% 94%;
+    --ring: 189 94% 35%;
 
     --radius: 0.75rem;
 
-    --gradient-hero: linear-gradient(135deg, hsl(217 30% 8%) 0%, hsl(217 28% 12%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(189 94% 43%) 0%, hsl(189 80% 55%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(217 28% 12%) 0%, hsl(217 25% 15%) 100%);
-    
-    --shadow-glow: 0 0 40px hsl(189 94% 43% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
-    
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(217 20% 96%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(189 94% 35%) 0%, hsl(189 80% 45%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(217 15% 97%) 100%);
+
+    --shadow-glow: 0 0 40px hsl(189 94% 35% / 0.25);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.15);
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  /* Dark theme */
   .dark {
     --background: 217 30% 8%;
     --foreground: 210 40% 98%;
@@ -76,6 +78,13 @@ All colors MUST be HSL.
     --border: 217 25% 20%;
     --input: 217 25% 18%;
     --ring: 189 94% 43%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(217 30% 8%) 0%, hsl(217 28% 12%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(189 94% 43%) 0%, hsl(189 80% 55%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(217 28% 12%) 0%, hsl(217 25% 15%) 100%);
+
+    --shadow-glow: 0 0 40px hsl(189 94% 43% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
   }
 }
 
@@ -97,7 +106,7 @@ All colors MUST be HSL.
   .animate-fade-in {
     animation: fade-in 0.6s ease-out forwards;
   }
-  
+
   .animate-slide-up {
     animation: slide-up 0.6s ease-out forwards;
   }

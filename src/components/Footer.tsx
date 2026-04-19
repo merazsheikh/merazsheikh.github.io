@@ -12,44 +12,43 @@ const Footer = () => {
               Meraz Jalaluddin Sheikh
             </h3>
             <p className="text-muted-foreground text-sm">
-              Data Scientist | API Developer | Based in London
+              Data Scientist &amp; ML Engineer · Based in London
             </p>
           </div>
 
           <div className="flex gap-4">
-            <a
-              href="https://github.com/merazsheikh"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              type="button"
+              onClick={() => window.open("https://github.com/merazsheikh", "_blank", "noopener,noreferrer")}
               className="p-3 bg-muted rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="GitHub"
             >
               <Github size={20} />
-            </a>
-            <a
-              href="https://linkedin.com/in/merazsheikh-dataanalyst"
-              target="_blank"
-              rel="noopener noreferrer"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("https://linkedin.com/in/merazsheikh-dataanalyst", "_blank", "noopener,noreferrer")}
               className="p-3 bg-muted rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin size={20} />
-            </a>
-            <a
-              href="mailto:merazsheikh27@gmail.com"
+            </button>
+            <button
+              type="button"
+              onClick={() => window.open("mailto:merazsheikh27@gmail.com", "_self")}
               className="p-3 bg-muted rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
               aria-label="Email"
             >
               <Mail size={20} />
-            </a>
+            </button>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center">
-          <p className="text-muted-foreground text-sm flex items-center justify-center gap-2">
-            © {currentYear} Meraz Jalaluddin Sheikh. Built with
-            <Heart size={16} className="text-primary" />
-            using React & TypeScript
+          <p className="text-muted-foreground text-sm flex items-center justify-center gap-2 flex-wrap">
+            © {currentYear} Meraz Jalaluddin Sheikh · Built with
+            <Heart size={16} className="text-primary fill-primary" />
+            using React &amp; TypeScript
           </p>
         </div>
       </div>

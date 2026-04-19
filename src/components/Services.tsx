@@ -1,33 +1,33 @@
 import { Card } from "@/components/ui/card";
-import { Server, Heart, ArrowRight } from "lucide-react";
+import { Server, Brain, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
 
 const Services = () => {
   const services = [
     {
-      icon: Server,
-      title: "API Development & Integration",
+      icon: Brain,
+      title: "Data Science & Machine Learning",
       description:
-        "End-to-end development, deployment, and monitoring of secure, scalable RESTful APIs. Expertise in OAuth 2.0, JWT authentication, and cloud-based API management platforms.",
+        "End-to-end ML pipelines — from EDA and feature engineering to model training, evaluation, and deployment. Experienced across computer vision, time-series forecasting, and classical ML with production-grade reproducibility.",
       features: [
-        "RESTful API Design",
-        "Security Implementation",
-        "Performance Optimization",
-        "CI/CD Deployment",
+        "Predictive Modeling & Classification",
+        "Computer Vision & Deep Learning",
+        "Feature Engineering & EDA",
+        "Model Evaluation & Interpretability",
       ],
       color: "text-primary",
     },
     {
-      icon: Heart,
-      title: "Volunteer Data Analysis",
+      icon: Server,
+      title: "API Development & Integration",
       description:
-        "Open to contributing free data analysis and research collaborations to gain more experience and support meaningful projects. Let's work together on impactful data-driven initiatives.",
+        "Secure, scalable RESTful APIs for high-volume production environments. Proven at fintech scale — OAuth 2.0, JWT, rate limiting, Apigee/Kong gateways, and full CI/CD deployment pipelines.",
       features: [
-        "Data Exploration & Cleaning",
-        "Statistical Analysis",
-        "Predictive Modeling",
-        "Insight Generation",
+        "RESTful API Design",
+        "Security & Authentication",
+        "Performance Optimization",
+        "CI/CD Deployment & Monitoring",
       ],
       color: "text-secondary",
     },
@@ -38,11 +38,11 @@ const Services = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            My <span className="gradient-text">Services</span>
+            What I <span className="gradient-text">Do</span>
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Professional API development and volunteer data analysis opportunities
+            Two disciplines, one engineer — research-grade ML and production-grade APIs.
           </p>
         </div>
 
@@ -50,12 +50,13 @@ const Services = () => {
           {services.map((service, index) => (
             <AnimatedSection key={index} delay={index * 0.2}>
               <motion.div
-                whileHover={{ scale: 1.05, y: -5 }}
+                whileHover={{ scale: 1.03, y: -5 }}
                 transition={{ duration: 0.3 }}
+                className="h-full"
               >
-                <Card className="p-8 bg-card border-border group">
+                <Card className="p-8 bg-card border-border group h-full flex flex-col">
                   <motion.div
-                    className="p-4 bg-muted rounded-lg inline-block mb-6"
+                    className="p-4 bg-muted rounded-lg inline-block mb-6 self-start"
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -84,14 +85,18 @@ const Services = () => {
                     ))}
                   </div>
 
-                  <div className="pt-4 border-t border-border">
-                    <a
-                      href="#contact"
+                  <div className="pt-4 border-t border-border mt-auto">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const el = document.querySelector("#contact");
+                        el?.scrollIntoView({ behavior: "smooth" });
+                      }}
                       className="text-primary font-semibold hover:underline inline-flex items-center gap-2 group-hover:gap-3 transition-all"
                     >
                       Get in touch
                       <ArrowRight size={16} />
-                    </a>
+                    </button>
                   </div>
                 </Card>
               </motion.div>

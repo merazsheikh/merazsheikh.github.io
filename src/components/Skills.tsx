@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Database, BarChart3, Wrench, MessageSquare } from "lucide-react";
+import { Code2, Brain, Database, BarChart3, Cloud, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
@@ -7,62 +7,81 @@ const Skills = () => {
   const skillCategories = [
     {
       icon: Code2,
-      title: "Programming & Data Science",
-      skills: [
-        "Python",
-        "SQL",
-        "TensorFlow",
-        "PyTorch",
-        "Scikit-learn",
-        "Time-Series Analysis",
-        "Deep Learning",
-        "Statistical Modeling",
-      ],
+      title: "Languages & Databases",
+      skills: ["Python", "R", "SQL", "PostgreSQL", "MySQL", "Lua", "HTML/CSS"],
       color: "text-primary",
     },
     {
-      icon: Database,
-      title: "Data Processing",
+      icon: Brain,
+      title: "Machine Learning & AI",
       skills: [
-        "EDA",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "Scikit-learn",
+        "XGBoost",
+        "Random Forest",
+        "Deep Learning",
+        "Computer Vision",
+        "Time-Series Analysis",
+      ],
+      color: "text-secondary",
+    },
+    {
+      icon: Database,
+      title: "Data Engineering & Analysis",
+      skills: [
         "ETL Pipelines",
         "Data Cleaning",
         "Feature Engineering",
-        "PySpark",
-        "Dask",
+        "EDA",
+        "Statistical Modelling",
+        "Hypothesis Testing",
+        "Pandas",
+        "NumPy",
       ],
-      color: "text-secondary",
+      color: "text-accent",
     },
     {
       icon: BarChart3,
       title: "Visualization & BI",
-      skills: ["Tableau", "Power BI", "Data Storytelling", "Dashboard Design"],
-      color: "text-accent",
-    },
-    {
-      icon: Wrench,
-      title: "API Development",
-      skills: [
-        "RESTful APIs",
-        "OAuth 2.0",
-        "JWT",
-        "Apigee",
-        "CI/CD Pipelines",
-        "Jira",
-        "GitHub",
-      ],
+      skills: ["Tableau", "Power BI", "Excel", "Matplotlib", "Seaborn", "ggplot2"],
       color: "text-primary",
     },
     {
-      icon: MessageSquare,
-      title: "Soft Skills",
+      icon: Cloud,
+      title: "Cloud, DevOps & Monitoring",
       skills: [
-        "Problem Solving",
-        "Analytical Thinking",
-        "Technical Communication",
-        "Team Collaboration",
+        "GCP",
+        "AWS",
+        "Git",
+        "GitHub",
+        "Jenkins",
+        "CI/CD",
+        "Splunk",
+        "Dynatrace",
+        "Jira",
+        "Confluence",
       ],
       color: "text-secondary",
+    },
+    {
+      icon: Shield,
+      title: "API Development & Security",
+      skills: [
+        "RESTful APIs",
+        "SOAP",
+        "Apigee Edge",
+        "Kong Gateway",
+        "CA Layer7",
+        "OAuth 2.0",
+        "JWT",
+        "Mutual SSL",
+        "Postman",
+        "SoapUI",
+        "Swagger/OpenAPI",
+      ],
+      color: "text-accent",
     },
   ];
 
@@ -75,7 +94,7 @@ const Skills = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive toolkit for data science, engineering, and API development
+            Full-stack data science and production engineering — from research-grade ML to deployed APIs at scale.
           </p>
         </div>
 
@@ -83,10 +102,10 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <AnimatedSection key={index} delay={index * 0.1}>
               <motion.div
-                whileHover={{ scale: 1.05, y: -5 }}
+                whileHover={{ scale: 1.03, y: -5 }}
                 transition={{ duration: 0.3 }}
               >
-                <Card className="p-6 bg-card border-border group">
+                <Card className="p-6 bg-card border-border group h-full">
                   <div className="flex items-center gap-3 mb-6">
                     <motion.div
                       className="p-3 bg-muted rounded-lg"

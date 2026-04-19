@@ -1,4 +1,4 @@
-import { GraduationCap, MapPin } from "lucide-react";
+import { GraduationCap, MapPin, Languages } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import AnimatedSection from "./AnimatedSection";
 
@@ -20,7 +20,7 @@ const About = () => {
               <MapPin className="text-primary" size={24} />
               <h3 className="text-2xl font-bold">Location</h3>
             </div>
-            <p className="text-muted-foreground mb-6">Hounslow, London</p>
+            <p className="text-muted-foreground mb-6">London, UK</p>
             
             <h3 className="text-xl font-bold mb-4">Professional Summary</h3>
             <p className="font-medium text-primary mb-3">Data Scientist, AI & ML Engineer</p>
@@ -30,8 +30,30 @@ const About = () => {
               production deployment. Passionate about turning data into actionable insights and driving innovation 
               in fast-paced tech environments.
             </p>
-          </Card>
+
+             <div className="pt-6 border-t border-border">
+                <div className="flex items-center gap-3 mb-3">
+                  <Languages className="text-secondary" size={20} />
+                  <h4 className="text-sm font-bold text-secondary uppercase tracking-wider">
+                    Languages Spoken
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["English", "Hindi", "Urdu", "Marathi", "Arabic"].map(
+                    (lang) => (
+                      <span
+                        key={lang}
+                        className="px-3 py-1 bg-muted rounded-full text-xs font-medium"
+                      >
+                        {lang}
+                      </span>
+                    )
+                  )}
+                </div>
+              </div>
+            </Card>
           </AnimatedSection>
+          
 
           <AnimatedSection delay={0.2}>
             <Card className="p-8 bg-card hover-lift border-border">
@@ -48,11 +70,16 @@ const About = () => {
                 <p className="text-muted-foreground font-medium mb-1">
                   Kingston University
                 </p>
-                <p className="text-sm text-muted-foreground mb-2">
-                  Sep 2024 – Sep 2025 · Distinction
-                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  <p className="text-sm text-muted-foreground">
+                    Sep 2024 – Sep 2025
+                  </p>
+                  <span className="inline-block px-2 py-0.5 bg-primary/20 text-primary text-xs font-semibold rounded">
+                    Distinction
+                  </span>
+                </div>
                 <p className="text-sm text-muted-foreground italic">
-                  Dissertation: Deepfake Detection using Image Augmentation
+                  Dissertation: Deepfake Detection using Image Augmentations
                 </p>
               </div>
 

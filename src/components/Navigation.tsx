@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { createPortal } from "react-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { FileText } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,9 +20,7 @@ const Navigation = () => {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Experience", href: "#experience" },
-    { name: "Skills", href: "#skills" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "CV", href: "#cv" },
+    { name: "Projects", href: "#portfolio" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -34,8 +32,8 @@ const Navigation = () => {
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Meraz_Sheikh_CV_2025.pdf";
-    link.download = "Meraz_Sheikh_CV_2025.pdf";
+    link.href = `/Meraz_Sheikh_CV.pdf?v=${new Date().getTime()}`;
+    link.download = "Meraz_Sheikh_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -51,35 +49,28 @@ const Navigation = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <a
-              href="#home"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection("#home");
-              }}
+            <button
+              type="button"
+              onClick={() => scrollToSection("#home")}
               className="text-2xl font-bold gradient-text"
             >
               MJS
-            </a>
+            </button>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.href);
-                  }}
-                  className={`text-muted-foreground hover:text-primary transition-colors duration-300 font-medium ${
-                    link.name === "CV" ? "flex items-center gap-1" : ""
-                  }`}
+                  type="button"
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium"
                 >
-                  {link.name === "CV" && <FileText size={16} />}
                   {link.name}
-                </a>
+                </button>
               ))}
+
+              <ThemeToggle />
 
               <Button
                 variant="outline"
@@ -89,20 +80,13 @@ const Navigation = () => {
                 <FileText size={16} />
                 Resume
               </Button>
-
-              <Button
-                variant="default"
-                onClick={() => scrollToSection("#contact")}
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90"
-              >
-                Get In Touch
-              </Button>
             </div>
 
             {/* Mobile Menu Button */}
             <button
               className="md:hidden text-foreground"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Open menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -118,8 +102,10 @@ const Navigation = () => {
             style={{ WebkitBackdropFilter: "blur(16px)" }}
           >
             {/* Close Button */}
-            <div className="absolute top-6 right-6">
+            <div className="absolute top-6 right-6 flex items-center gap-3">
+              <ThemeToggle />
               <button
+                type="button"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="text-foreground hover:text-primary transition-colors"
                 aria-label="Close menu"
@@ -131,18 +117,14 @@ const Navigation = () => {
             {/* Menu Content */}
             <div className="flex flex-col gap-6 p-6 pt-20">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.href);
-                  }}
-                  className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium py-2 flex items-center gap-2 text-lg"
+                  type="button"
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-muted-foreground hover:text-primary transition-colors duration-300 font-medium py-2 text-lg text-left"
                 >
-                  {link.name === "CV" && <FileText size={18} />}
                   {link.name}
-                </a>
+                </button>
               ))}
               <Button
                 variant="outline"
@@ -151,13 +133,6 @@ const Navigation = () => {
               >
                 <FileText size={16} />
                 Download Resume
-              </Button>
-              <Button
-                variant="default"
-                onClick={() => scrollToSection("#contact")}
-                className="bg-gradient-to-r from-primary to-accent hover:opacity-90 w-full mt-4"
-              >
-                Get In Touch
               </Button>
             </div>
           </div>,

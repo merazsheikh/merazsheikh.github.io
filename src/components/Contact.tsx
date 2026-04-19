@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import AnimatedSection from "./AnimatedSection";
 import { motion } from "framer-motion";
@@ -33,7 +33,7 @@ const Contact = () => {
         },
         (error) => {
           setMessageStatus("error");
-          setErrorMessage("Failed to send message. Please try again or contact directly.");
+          setErrorMessage("Failed to send message. Please email directly at merazsheikh27@gmail.com.");
           console.error(error);
         }
       );
@@ -43,7 +43,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Hounslow, London",
+      value: "London, UK",
       color: "text-primary",
     },
     {
@@ -54,10 +54,10 @@ const Contact = () => {
       color: "text-secondary",
     },
     {
-      icon: Phone,
-      label: "Phone",
-      value: "07776782429",
-      href: "tel:07776782429",
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "merazsheikh",
+      href: "https://linkedin.com/in/merazsheikh-dataanalyst",
       color: "text-accent",
     },
   ];
@@ -67,13 +67,11 @@ const Contact = () => {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://linkedin.com/in/merazsheikh-dataanalyst",
-      username: "merazsheikh-dataanalyst",
     },
     {
       icon: Github,
       label: "GitHub",
       href: "https://github.com/merazsheikh",
-      username: "merazsheikh",
     },
   ];
 
@@ -86,7 +84,7 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Looking for a data scientist or API developer? Let's connect and discuss how I can contribute to your team.
+            Open to Data Scientist, ML Engineer, and API roles in London or remote. Let's connect.
           </p>
         </div>
 
@@ -105,12 +103,15 @@ const Contact = () => {
                     </div>
                     <h3 className="font-bold mb-2">{info.label}</h3>
                     {info.href ? (
-                      <a
-                        href={info.href}
-                        className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                      <button
+                        type="button"
+                        onClick={() =>
+                          window.open(info.href, info.href.startsWith("http") ? "_blank" : "_self", "noopener,noreferrer")
+                        }
+                        className="text-muted-foreground hover:text-primary transition-colors text-sm break-all"
                       >
                         {info.value}
-                      </a>
+                      </button>
                     ) : (
                       <p className="text-muted-foreground text-sm">{info.value}</p>
                     )}
@@ -124,11 +125,11 @@ const Contact = () => {
           <AnimatedSection delay={0.4}>
             <Card className="p-8 md:p-12 bg-card border-border text-center">
               <h3 className="text-2xl font-bold mb-4">Send Me a Message</h3>
-              
+
               {messageStatus === "success" && (
                 <div className="mb-6 p-4 bg-green-500/10 border border-green-500/40 rounded-lg">
                   <p className="text-green-600 dark:text-green-400 font-medium">
-                    ✓ Message sent successfully! I'll get back to you soon.
+                    ✓ Message sent. I'll get back to you within 1–2 working days.
                   </p>
                 </div>
               )}
@@ -140,7 +141,8 @@ const Contact = () => {
                   </p>
                 </div>
               )}
-              <form ref={form} onSubmit={sendEmail} className="space-y-4 max-w-lg mx-auto">
+
+              <form ref={form} onSubmit={sendEmail} className="space-y-4 max-w-lg mx-auto text-left">
                 <div className="space-y-2">
                   <label htmlFor="from_name" className="text-sm font-medium">
                     Your Name
@@ -149,9 +151,9 @@ const Contact = () => {
                     id="from_name"
                     type="text"
                     name="from_name"
-                    placeholder="John Doe"
+                    placeholder="Jane Smith"
                     required
-                    className="w-full p-3 border rounded bg-background text-foreground placeholder:text-muted-foreground"
+                    className="w-full p-3 border border-border rounded bg-background text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                   />
                 </div>
                 <div className="space-y-2">
@@ -162,9 +164,9 @@ const Contact = () => {
                     id="from_email"
                     type="email"
                     name="from_email"
-                    placeholder="your.email@example.com"
+                    placeholder="jane@company.com"
                     required
-                    className="w-full p-3 border rounded bg-background text-foreground placeholder:text-muted-foreground"
+                    className="w-full p-3 border border-border rounded bg-background text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                   />
                 </div>
                 <div className="space-y-2">
@@ -174,10 +176,10 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    placeholder="Tell me about your project or opportunity..."
+                    placeholder="Tell me about the role or project..."
                     required
                     rows={5}
-                    className="w-full p-3 border rounded bg-background text-foreground placeholder:text-muted-foreground"
+                    className="w-full p-3 border border-border rounded bg-background text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none"
                   ></textarea>
                 </div>
 
@@ -196,19 +198,13 @@ const Contact = () => {
                 {socialLinks.map((link) => (
                   <Button
                     key={link.label}
+                    type="button"
                     variant="outline"
-                    asChild
+                    onClick={() => window.open(link.href, "_blank", "noopener,noreferrer")}
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground group"
                   >
-                    <a
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <link.icon size={20} />
-                      <span>{link.label}</span>
-                    </a>
+                    <link.icon size={20} className="mr-2" />
+                    <span>{link.label}</span>
                   </Button>
                 ))}
               </div>
