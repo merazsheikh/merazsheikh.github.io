@@ -9,7 +9,7 @@ const Services = () => {
       icon: Brain,
       title: "Data Science & Machine Learning",
       description:
-        "End-to-end ML pipelines — from EDA and feature engineering to model training, evaluation, and deployment. Experienced across computer vision, time-series forecasting, and classical ML with production-grade reproducibility.",
+        "End-to-end ML pipelines - from EDA and feature engineering to model training, evaluation, and deployment. Experienced across computer vision, time-series forecasting, and classical ML with production-grade reproducibility.",
       features: [
         "Predictive Modeling & Classification",
         "Computer Vision & Deep Learning",
@@ -22,7 +22,7 @@ const Services = () => {
       icon: Server,
       title: "API Development & Integration",
       description:
-        "Secure, scalable RESTful APIs for high-volume production environments. Proven at fintech scale — OAuth 2.0, JWT, rate limiting, Apigee/Kong gateways, and full CI/CD deployment pipelines.",
+        "Secure, scalable RESTful APIs for high-volume production environments. Proven at fintech scale - OAuth 2.0, JWT, rate limiting, Apigee/Kong gateways, and full CI/CD deployment pipelines.",
       features: [
         "RESTful API Design",
         "Security & Authentication",
@@ -42,7 +42,7 @@ const Services = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Two disciplines, one engineer — research-grade ML and production-grade APIs.
+            Two disciplines, one engineer - research-grade ML and production-grade APIs.
           </p>
         </div>
 

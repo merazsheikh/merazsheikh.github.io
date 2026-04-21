@@ -26,7 +26,7 @@ const About = () => {
             <p className="font-medium text-primary mb-3">Data Scientist, AI & ML Engineer</p>
             <p className="text-muted-foreground leading-relaxed">
               Data Scientist with strong expertise in machine learning, computer vision, and deep learning. 
-              I build end-to-end ML systems and APIs that solve real problems—from research-grade models to 
+              I build end-to-end ML systems and APIs that solve real problems from research-grade models to 
               production deployment. Passionate about turning data into actionable insights and driving innovation 
               in fast-paced tech environments.
             </p>

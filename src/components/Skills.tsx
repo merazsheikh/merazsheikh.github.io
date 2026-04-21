@@ -94,7 +94,7 @@ const Skills = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Full-stack data science and production engineering — from research-grade ML to deployed APIs at scale.
+            Full-stack data science and production engineering from research-grade ML to deployed APIs at scale.
           </p>
         </div>
 

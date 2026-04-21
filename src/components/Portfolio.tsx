@@ -26,7 +26,7 @@ const Portfolio = () => {
       category: "Deep Learning · Time-Series",
       description:
         "Compared DNN, LSTM, GRU, CNN, and a custom feed-forward network on GBP/USD time-series forecasting. Full pipeline from data ingestion and feature engineering through model training and evaluation.",
-      result: "LSTM outperformed baselines — 15% lower MAE at 94% directional accuracy",
+      result: "LSTM outperformed baselines - 15% lower MAE at 94% directional accuracy",
       technologies: ["Python", "TensorFlow", "LSTM", "GRU", "Time-Series"],
       color: "text-secondary",
       repo: "https://github.com/merazsheikh/gbpusd-forecasting",
@@ -38,7 +38,7 @@ const Portfolio = () => {
       category: "Machine Learning",
       description:
         "Systematically tested 8 ML algorithms with and without LDA preprocessing to measure when dimensionality reduction actually helps versus hurts performance. A useful counter to the \"always use deep learning\" default.",
-      result: "KNN reached 98.3% accuracy — highest of the 8 models tested",
+      result: "KNN reached 98.3% accuracy - highest of the 8 models tested",
       technologies: ["Scikit-learn", "KNN", "LDA", "Python", "Statistical Analysis"],
       color: "text-accent",
       repo: "https://github.com/merazsheikh/gbpusd-forecasting",
@@ -74,7 +74,7 @@ const Portfolio = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Real projects — ML models, deep learning, production systems. Code and write-ups linked on each card.
+            Real projects - ML models, deep learning, production systems. Code and write-ups linked on each card.
           </p>
         </div>
 

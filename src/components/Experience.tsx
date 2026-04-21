@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 const Experience = () => {
   const roles = [
     {
-      title: "Research Assistant — Intrusion Detection Systems",
+      title: "Research Assistant - Intrusion Detection Systems",
       company: "Kingston University",
       period: "Jan 2025 – Present",
       location: "Kingston, UK",
       label: "Current Role",
       achievements: [
-        "Processed 16M+ network flow records from the CICIDS2018 dataset — data cleaning, normalization, and feature engineering across 80+ features",
+        "Processed 16M+ network flow records from the CICIDS2018 dataset - data cleaning, normalization, and feature engineering across 80+ features",
         "Tackled severe class imbalance with SMOTE and undersampling, significantly improving minority-class detection",
         "Trained and evaluated Random Forest and XGBoost models (binary and multi-class) with GridSearchCV hyperparameter tuning and cross-validation",
         "Built reproducible end-to-end ML pipelines in Python (Pandas, NumPy, Scikit-learn) with results documented for academic publication",
@@ -28,7 +28,7 @@ const Experience = () => {
       label: "Previous Role",
       achievements: [
         "Led API migration from CA Layer7 to Apigee Edge and Kong Gateway for HDFC and TransUnion CIBIL, improving scalability and governance",
-        "Developed RESTful and SOAP services handling 5M+ transactions with 99% uptime across the full API lifecycle — design, testing, CI/CD deployment",
+        "Developed RESTful and SOAP services handling 5M+ transactions with 99% uptime across the full API lifecycle - design, testing, CI/CD deployment",
         "Implemented OAuth 2.0, JWT, IP whitelisting, and cryptographic protections for sensitive financial data and regulatory compliance",
         "Applied rate limiting and traffic-control policies to manage high-volume workloads on fintech APIs",
         "Monitored production APIs with Splunk and Dynatrace, cutting incident response time through proactive alerting",
