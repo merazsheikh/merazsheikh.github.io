@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Brain, Database, BarChart3, Cloud, Shield } from "lucide-react";
+import { Code2, Brain, Database, BarChart3, LineChart, Cloud, Shield } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 
@@ -19,8 +19,6 @@ const Skills = () => {
         "PyTorch",
         "Keras",
         "Scikit-learn",
-        "XGBoost",
-        "Random Forest",
         "Deep Learning",
         "Computer Vision",
         "Time-Series Analysis",
@@ -29,12 +27,23 @@ const Skills = () => {
     },
     {
       icon: Database,
-      title: "Data Engineering & Analysis",
+      title: "Data Engineering & Warehousing",
       skills: [
-        "ETL Pipelines",
+        "ETL / ELT Pipelines",
+        "Star Schema Design",
+        "Data Modeling",
+        "Oracle APEX",
+        "Power Query",
+      ],
+      color: "text-accent",
+    },
+    {
+      icon: LineChart,
+      title: "Data Analysis & Statistics",
+      skills: [
+        "EDA",
         "Data Cleaning",
         "Feature Engineering",
-        "EDA",
         "Statistical Modelling",
         "Hypothesis Testing",
         "Pandas",
