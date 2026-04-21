@@ -23,7 +23,7 @@ const Portfolio = () => {
     },
     {
       icon: Brain,
-      title: "Clinical Outcomes EDA — SUPPORT2 Dataset",
+      title: "Clinical Outcomes EDA -SUPPORT2 Dataset",
       category: "Healthcare · EDA · Group Project",
       description:
         "Full exploratory analysis of the UCI SUPPORT2 dataset (9,105 seriously ill patients, 48 clinical and demographic variables) to identify predictors of in-hospital mortality. Variable-specific imputation, dual outlier detection (IQR + 3σ), and findings translated into 8 actionable recommendations.",
@@ -47,11 +47,11 @@ const Portfolio = () => {
     },
     {
       icon: TrendingUp,
-      title: "GBP/USD Exchange Rate Forecasting — Deep Learning",
+      title: "GBP/USD Exchange Rate Forecasting -Deep Learning",
       category: "Deep Learning · Time-Series",
       description:
           "Built and compared deep learning models for daily GBP/USD forecasting on 1,200 NASDAQ samples (Aug 2020 - Jan 2025). Developed and evaluated the GRU model, co-designed a custom DNN, and unified across 4 model implementations. Built DNN, LSTM, GRU, a hybrid LSTM-GRU, and a regression feedforward and compared on RMSE, MAPE, and R².",
-      result: "GRU achieved RMSE 0.0040, MAPE 0.22%, R² 0.9724 — comparable to LSTM. Found that the hybrid LSTM-GRU underperformed both base models (MAPE 0.39%).",
+      result: "GRU achieved RMSE 0.0040, MAPE 0.22%, R² 0.9724 -comparable to LSTM. Found that the hybrid LSTM-GRU underperformed both base models (MAPE 0.39%).",
       technologies: ["Python", "TensorFlow", "Keras", "Time-Series", "GRU", "LSTM", "DNN", "RobustScaler"],
       color: "text-secondary",
       repo: "TODO_GBP_USD_REPO_URL",
@@ -70,7 +70,7 @@ const Portfolio = () => {
     },
     {
       icon: TrendingUp,
-      title: "SFO Airport Satisfaction — Logistic Regression",
+      title: "SFO Airport Satisfaction -Logistic Regression",
      category: "Predictive Modeling · R",
       description:
         "Built a logistic regression model on 3,651 passenger survey records to identify drivers of airport satisfaction. Backward elimination with AIC comparison across 3 candidate models. Found cleanliness and wait time as significant predictors; flight destination and frequency were not.",
@@ -88,7 +88,7 @@ const Portfolio = () => {
     },
     {
       icon: Database,
-      title: "Royal Anchor Shipping — Database Design",
+      title: "Royal Anchor Shipping -Database Design",
       category: "Data Modeling · SQL",
       description:
         "Translated a multi-page shipping industry brief into a normalized 15-table Oracle schema with 16 business-rule constraints, proper cardinalities, and junction tables for many-to-many relationships. Wrote 6 multi-table SQL queries (joins across 4+ tables, aggregations, ETA calculations) to validate system requirements.",
@@ -97,7 +97,7 @@ const Portfolio = () => {
     },
     {
       icon: BarChart3,
-      title: "UK Flight Punctuality — Data Warehouse & Tableau",
+      title: "UK Flight Punctuality -Data Warehouse & Tableau",
       category: "Data Warehousing · BI · ELT",
       description:
         "End-to-end star-schema data warehouse built on 24 months of UK flight punctuality data. Designed fact + 5 dimension tables in Oracle APEX, built an ELT pipeline (Power Query consolidation → staging → transformed dimensional load with surrogate keys), and produced 4 Tableau dashboards surfacing cancellation hotspots, airline delay trends, and on-time performance by country.",
@@ -125,7 +125,7 @@ const Portfolio = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4"></div>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Real projects — ML models, deep learning, production systems. Code and write-ups linked on each card.
+            Real projects -ML models, deep learning, production systems. Code and write-ups linked on each card.
           </p>
         </div>
 
