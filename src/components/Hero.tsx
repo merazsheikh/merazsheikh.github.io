@@ -47,7 +47,7 @@ const Hero = () => {
               <span className="gradient-text">Sheikh</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-4 font-medium">
-              Data Scientist & ML Engineer
+              Data Scientist, AI & ML Engineer
             </p>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl">
               Building production-ready machine learning systems and scalable APIs that turn data into action. 
