@@ -30,9 +30,9 @@ const Portfolio = () => {
       result: "Identified PaO₂/FiO₂ ratio, mean blood pressure, and sodium as strong mortality signals",
       technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "SciPy", "Clinical Data"],
       color: "text-primary",
-      repo: "TODO_SUPPORT2_REPO_URL",
-      pdf: "TODO_SUPPORT2_SLIDES_URL",
-      pdfLabel: "Slides",
+      repo: "https://github.com/merazsheikh/support2-clinical-eda",
+      code: "https://github.com/merazsheikh/support2-clinical-eda/blob/master/notebook.ipynb",
+      pdfLabel: "https://github.com/merazsheikh/support2-clinical-eda/blob/master/presentation.pdf",
     },
     {
       icon: BarChart3,
@@ -43,7 +43,9 @@ const Portfolio = () => {
       result: "KNN won at 98.33% after tuning; Gaussian Naive Bayes showed the largest gain (74.17% → 88.61%) from tuning var_smoothing",
       technologies: ["Python", "Scikit-learn", "GridSearchCV","LDA", "SVM", "KNN"],
       color: "text-accent",
-      repo: "TODO_BINARY_CLASSIFICATION_REPO_URL",
+      repo: "https://github.com/merazsheikh/digits-classification-ml",
+      code: "https://github.com/merazsheikh/digits-classification-ml/blob/main/notebook.ipynb",
+      pdfLabel: "https://github.com/merazsheikh/digits-classification-ml/blob/main/report.pdf",
     },
     {
       icon: TrendingUp,
@@ -54,7 +56,8 @@ const Portfolio = () => {
       result: "GRU achieved RMSE 0.0040, MAPE 0.22%, R² 0.9724 -comparable to LSTM. Found that the hybrid LSTM-GRU underperformed both base models (MAPE 0.39%).",
       technologies: ["Python", "TensorFlow", "Keras", "Time-Series", "GRU", "LSTM", "DNN", "RobustScaler"],
       color: "text-secondary",
-      repo: "TODO_GBP_USD_REPO_URL",
+      repo: "https://github.com/merazsheikh/gbpusd-forecasting-deep-learning",
+      pdfLabel: "https://github.com/merazsheikh/gbpusd-forecasting-deep-learning/blob/main/report.pdf",
     },
   ];
 
@@ -66,7 +69,9 @@ const Portfolio = () => {
       description:
         "Analyzed 306K+ crime records (2016–2022) across location, time, season, and COVID-19 periods. 20 targeted visualizations and Spearman correlation analysis led to crime prevention recommendations.",
       technologies: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-      repo: "TODO_MONTGOMERY_REPO_URL",
+      repo: "https://github.com/merazsheikh/montgomery-crime-analysis",
+      code: "https://github.com/merazsheikh/montgomery-crime-analysis/blob/main/notebook.ipynb",
+      pdfLabel: "https://github.com/merazsheikh/montgomery-crime-analysis/blob/main/report.pdf",
     },
     {
       icon: TrendingUp,
@@ -75,7 +80,9 @@ const Portfolio = () => {
       description:
         "Built a logistic regression model on 3,651 passenger survey records to identify drivers of airport satisfaction. Backward elimination with AIC comparison across 3 candidate models. Found cleanliness and wait time as significant predictors; flight destination and frequency were not.",
       technologies: ["R", "Logistic Regression", "AIC", "Statistical Modeling"],
-      repo: "TODO_SFO_LOGREG_REPO_URL",
+      repo: "https://github.com/merazsheikh/sfo-satisfaction-logistic-regression",
+      code: "https://github.com/merazsheikh/sfo-satisfaction-logistic-regression/blob/main/analysis.R",
+      pdfLabel: "https://github.com/merazsheikh/sfo-satisfaction-logistic-regression/blob/main/report.pdf",
    },
     {
       icon: FileSpreadsheet,
@@ -84,7 +91,7 @@ const Portfolio = () => {
       description:
         "Descriptive statistics and cross-group comparisons on local government staff data (366 employees, 5 departments). Report structured for a non-technical audience.",
       technologies: ["R", "ggplot2", "Descriptive Statistics"],
-      repo: "TODO_R_COURSEWORK_REPO_URL",
+      repo: "https://github.com/merazsheikh/royal-anchor-shipping-db",
     },
     {
       icon: Database,
@@ -93,7 +100,8 @@ const Portfolio = () => {
       description:
         "Translated a multi-page shipping industry brief into a normalized 15-table Oracle schema with 16 business-rule constraints, proper cardinalities, and junction tables for many-to-many relationships. Wrote 6 multi-table SQL queries (joins across 4+ tables, aggregations, ETA calculations) to validate system requirements.",
       technologies: ["Oracle SQL", "ERD", "Normalization", "Data Modeling", "DDL"],
-      repo: "TODO_LOGISTICS_DB_REPO_URL",
+      repo: "https://github.com/merazsheikh/royal-anchor-shipping-db",
+      pdfLabel: "https://github.com/merazsheikh/royal-anchor-shipping-db/blob/main/report.pdf",
     },
     {
       icon: BarChart3,
@@ -102,7 +110,8 @@ const Portfolio = () => {
       description:
         "End-to-end star-schema data warehouse built on 24 months of UK flight punctuality data. Designed fact + 5 dimension tables in Oracle APEX, built an ELT pipeline (Power Query consolidation → staging → transformed dimensional load with surrogate keys), and produced 4 Tableau dashboards surfacing cancellation hotspots, airline delay trends, and on-time performance by country.",
       technologies: ["Oracle APEX", "SQL", "Star Schema", "ELT", "Tableau", "Power Query"],
-      repo: "TODO_FLIGHT_WAREHOUSE_REPO_URL",
+      repo: "https://github.com/merazsheikh/uk-flight-punctuality-warehouse",
+      pdfLabel: "https://github.com/merazsheikh/uk-flight-punctuality-warehouse/blob/main/K2453542_CW2_Part1.pdf",
     },
   ];
 
